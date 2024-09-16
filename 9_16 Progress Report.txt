@@ -1,4 +1,4 @@
-﻿Subsystem 1 - Julia
+﻿Subsystem 1 - Julia (9/16)
 * As a team we decided on the microcontroller and sensor we are using
    * Sensor: THERMAL IMAGE SENSOR 160HX120V
    * Microcontroller: ESP32
@@ -20,7 +20,7 @@ This week
 * Set up Altium and start the subsystem project, goal is to finish
 
 
-Subsystem 3-Erica
+Subsystem 3-Erica (9/16)
 * Started building basic html layout that shows the video streaming feed
    * Next step: make it look a lot nicer, make a logo?
    * Later step: add tabs for the switchgear # where the video for that switchgear will be (just to show that it can later be expanded)
