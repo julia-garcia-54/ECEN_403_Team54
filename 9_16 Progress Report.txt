@@ -1,0 +1,31 @@
+﻿Subsystem 1 - Julia
+* As a team we decided on the microcontroller and sensor we are using
+   * Sensor: THERMAL IMAGE SENSOR 160HX120V
+   * Microcontroller: ESP32
+* Researched the viability of fiber optic cables to transfer data, not viable
+* Researched how to encase the sensor and accompanying pcb, so the switchgear can pass the dielectric test. 
+   * A thin plastic material should work as it won’t interfere with the thermal sensor and isn’t metal
+* Requested Altium access -> gained Altium access
+* Created the github repository
+* Researched possible power supplies, need at least 3.1 volts to power chosen sensor
+   * GB20S05K01 - AC/DC CONVERTER 5V 15W ($8)
+   * IRM-15-5 - Enclosed AC DC Converters 1 Output 5V 3A 85 ~ 305 VAC, 120 ~ 430 VDC Input ($9.28)
+   * PAAM15-10 - Enclosed AC DC Converters 1 Output 5V 3A 90 ~ 264 VAC, 120 ~ 370 VDC Input ($20.59)
+   * All three meet voltage requirements, PAAM has the best temperature rating with a max operating temp of 80 C, the other two have a max of 70 C.
+      * Over double the price might not be worth only a 10 degree increase
+* Researched how to plot a heatmap on matlab
+   * https://www.mathworks.com/help/bioinfo/ref/heatmap.view.html
+This week
+* Order parts so testing can begin (monday)
+* Set up Altium and start the subsystem project, goal is to finish
+
+
+Subsystem 3-Erica
+* Started building basic html layout that shows the video streaming feed
+   * Next step: make it look a lot nicer, make a logo?
+   * Later step: add tabs for the switchgear # where the video for that switchgear will be (just to show that it can later be expanded)
+* Figure out how i'm going to get the video stream from the microcontroller? URL or IP address or will i have to sort through the pixel data
+* Ideas to add: color coded heatmap key, (so operators can see if the switchgear is abnormally hot).
+* Possible future step: Use image similarity (instead of machine learning) to determine ‘open’ or closed’
+   * I would need an image of switch being open or closed at the same angle that sensor would be at
+   * The image would prob need to be from the thermal sensor so it looks similar to the video stream
