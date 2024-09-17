@@ -19,6 +19,15 @@ This week
 * Order parts so testing can begin (monday)
 * Set up Altium and start the subsystem project, goal is to finish
 
+Subsystem 2-Blake (9/16)
+* Mainly have been reading the FLIR sensor's engineering document
+* Looking at things such as coniguration, environmental conditions, and how the sensor filters noise
+* Researching the sensor's serial interface (SPI)
+* Looking at ESP32's that we would possibly use (How much memory?)
+* Looking into ML of images to automatically tell if switch is open or closed
+* Ordering an ESP32 dev kit to start on intro project
+
+
 
 Subsystem 3-Erica (9/16)
 * Started building basic html layout that shows the video streaming feed
