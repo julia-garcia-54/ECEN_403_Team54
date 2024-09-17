@@ -30,11 +30,12 @@ Subsystem 2-Blake (9/16)
 
 
 Subsystem 3-Erica (9/16)
-* Started building basic html layout that shows the video streaming feed
-   * Next step: make it look a lot nicer, make a logo?
-   * Later step: add tabs for the switchgear # where the video for that switchgear will be (just to show that it can later be expanded)
-* Figure out how i'm going to get the video stream from the microcontroller? URL or IP address or will i have to sort through the pixel data
-* Ideas to add: color coded heatmap key, (so operators can see if the switchgear is abnormally hot).
-* Possible future step: Use image similarity (instead of machine learning) to determine ‘open’ or closed’
-   * I would need an image of switch being open or closed at the same angle that sensor would be at
-   * The image would prob need to be from the thermal sensor so it looks similar to the video stream
+Started Researching website developments and built basic html layout that shows the video streaming feed
+It currently displays an empty video and drop down to view different switchgear #’s
+Researching API for fetching videos
+Brainstorming new website features to be implemented:
+Next steps:
+Make it look nice, put in powell colors/font
+Have login screen to input employee ID (requires database)
+Have search for switchgear serial code, once it pulls up it will display adjacent switchgears in drop down format (so operator does not have to retype code for switchgear right next to the original one)
+
