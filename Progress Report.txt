@@ -50,16 +50,18 @@ Subsystem 2-Blake (9/16)
 * Dev microcontroller has been received
 * Looking into frameworks and methods of ML to use
 * Will probably use TensorFlow to identify the switch and use my own pixel math to determine if the switch is open or closed.
-* More recently started on intro project 
+* More recently started on intro project
 9/30
-* Finished login page: Setup Firebase for users to make accounts and properly login
-  * Made error messages if username/password is not adequate
-* Created layout for Overview page that displays multiple different video streams as well as a search bar that leads you to a new page → Video page (which displays full screen of video)
-* Finished Midterm Report + presented 
-* Next Steps:
-  * Finish Search Functionality for overview page
-  * Learn how to stream data from live video feed to website
-  * Add more features to make website work smoothly
+Work Accomplished this week:
+* ML concept design has been completed
+* Microcontroller intro project is halfway done
+* Learning how to use esp-idf with a decent IDE
+Weekly Goals:
+* Finish up microcontroller intro project
+* Get good progress with ML intro project / get it done
+* Start on ML training data
+
+
 
 Subsystem 3-Erica (9/16)
 * Started Researching website developments and built basic html layout that shows the video streaming feed
@@ -75,4 +77,13 @@ Subsystem 3-Erica (9/16)
 * Continued working on Website UI design
 * Met with company to discuss project requirements 
 * Started working on FSR and ICD
+9/30
+* Finished login page: Setup Firebase for users to make accounts and properly login
+  * Made error messages if username/password is not adequate
+* Created layout for Overview page that displays multiple different video streams as well as a search bar that leads you to a new page → Video page (which displays full screen of video)
+* Finished Midterm Report + presented 
+* Next Steps:
+  * Finish Search Functionality for overview page
+  * Learn how to stream data from live video feed to website
+  * Add more features to make website work smoothly
 
