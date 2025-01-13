@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!--character encoding-->
+  <title>Overview Page</title>
+  <!-- link to styles.css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- include overview.js -->
+  <script src="overview.js" defer></script>
+  <!--google icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <!-- link to fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+</head>
+<body>
+  <div class ="search-wrapper"> <!--wrapper for search bar + error message-->
+  <!-- Search Bar -->
+  <div class="search-container">
+    <!--contianer includes search input +button (which includes magnifier icon)-->
+    <input type="text" id="search-input" class="search-input" placeholder="Enter Model ID">
+    <span class="search-icon material-symbols-outlined">search</span> <!--search icon-->
+    <!--this is invisble-->
+    <button id="search-button" class="search-button"></button>
+  </div>
+
+  <!-- incorrect search error message-->
+  <div id="error-message" style="color: red; display: none;"></div>
+</div>
+
+  <!-- Video Grid **change names + amount later**-->
+  <div class="video-grid">
+    <div class="video-item" data-id="001">
+      <div class="thumbnail-box">
+        <p class="model-id">Model ID: 001</p>
+      </div>
+    </div>
+    <div class="video-item" data-id="002"> <!--video items for is 002-->
+      <div class="thumbnail-box">
+        <p class="model-id">Model ID: 002</p>
+      </div>
+    </div>
+  </div>
+  <!-- link to map-builder-->
+  <div class="map-builder-link">
+    <!--button to navigate to map-->
+    <a href="map_builder.html" class="map-builder-button">Build Your Map</a>
+  </div> 
+  
+</body>
+</html>

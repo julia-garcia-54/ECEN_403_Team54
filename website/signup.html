@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <!-- link to styles.css-->
+  <link rel="stylesheet" href="styles.css">
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <!-- signup.js -->
+  <script src="signup.js" defer></script>
+</head>
+<body>
+<!-- Sign-Up Container -->
+<div class="signup-container">
+    <h2>Create an Account</h2>
+    <form id="signup-form">
+      <!-- input for email +pwd-->
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input type="password" id="signup-password" placeholder="Password" required minlength="6" />
+        <input type="password" id="signup-password-confirm" placeholder="Confirm Password" required minlength="6" />
+      <!-- submit button-->  
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="signup-error-message"></p>
+    <!-- go back to index login page if already have an account-->
+    <p>
+      Already have an account?
+      <a href="index.html">Login here</a>
+    </p>
+  </div>
+  
+</body>
+</html>
