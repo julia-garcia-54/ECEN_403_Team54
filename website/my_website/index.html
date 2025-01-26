@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- this is the character encoding (UTF 8) -->
+  <meta charset="UTF-8" />
+  <!-- title-->
+  <title>Login Page</title>
+  <!-- link index.css -->
+  <link rel="stylesheet" href="index.css" />
+  <!--font link-->
+  <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!--  Logo banner -->
+  <div class="banner">
+    <!-- Powell Logo -->
+    <img src="images/logo.jpg" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Login Form container (box) -->
+  <div class="login-container">
+    <!-- login form heading-->
+    <h2>Login</h2>
+    <form id="login-form"> 
+      <!-- users input email + pwd (inputs) and submit (button)-->
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <!-- clickable link to registration Form -->
+    <p class="register-text">
+        Don't have an account? <a href="signup.html">Register here</a>
+      </p>
+    <!-- error message-->  
+    <p id="error-message"></p>
+  </div>
+
+  <!-- Firebase SDK app + auth  -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <!-- JavaScript link -->
+  <script src="app.js"></script>
+</body>
+</html>
