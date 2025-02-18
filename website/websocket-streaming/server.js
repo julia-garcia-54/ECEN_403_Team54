@@ -1,3 +1,164 @@
+/*
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+// Middleware to parse incoming requests
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Endpoint to receive JPEG images from the ESP32
+app.post('/upload', (req, res) => {
+  const imageData = req.body.image; // Assuming the image is sent as base64
+  if (!imageData) {
+    return res.status(400).send('No image data received');
+  }
+
+  // Convert base64 to buffer
+  const buffer = Buffer.from(imageData, 'base64');
+
+  // Save the image to a file
+  const imagePath = path.join(__dirname, 'images', 'latest.jpg');
+  fs.writeFileSync(imagePath, buffer);
+
+  console.log('Image saved:', imagePath);
+  res.status(200).send('Image received');
+});
+
+// Serve the latest image to the client
+app.get('/latest-image', (req, res) => {
+  const imagePath = path.join(__dirname, 'images', 'latest.jpg');
+  if (fs.existsSync(imagePath)) {
+    res.sendFile(imagePath);
+  } else {
+    res.status(404).send('Image not found');
+  }
+});
+
+// Serve static files (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Start the server
+app.listen(port, () => {
+  console.log(`HTTP server is running on http://10.245.93.72:${port}`);
+});
+
+
+*/
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+//added to automatically running image_convert
+//const { spawn } = require('child_process'); // <-- Import child_process
+
+const app = express();
+const PORT = 3000;
+
+// Middleware to parse raw binary data
+app.use(bodyParser.raw({ type: 'application/json', limit: '15mb' })); // Adjust limit as needed
+
+// POST route to receive raw grayscale image data, now async
+app.post('/ping', async (req, res) => {
+  console.log('Received a POST request at /ping');
+
+  if (!req.body || req.body.length === 0) {
+    return res.status(400).json({ message: 'No data received' });
+  }
+
+  const filePath = 'received_image.raw';
+
+  try {
+    await fs.promises.writeFile(filePath, req.body);
+    console.log(`Image saved successfully! Size: ${req.body.length} bytes`);
+    res.status(200).json({ message: 'Image received successfully' });
+  } catch (err) {
+    console.error('Error saving file:', err);
+    res.status(500).json({ message: 'Failed to save image' });
+  }
+});
+
+// Test GET route
+app.get('/', (req, res) => {
+  res.send('Server is running...');
+});
+
+// Start the server
+app.listen(PORT, "10.245.93.72", () => {
+  console.log(`HTTP server is running on http://10.245.93.72:${PORT}`);
+});
+
+
+/* post request original
+//imports express module, for HTTP requests
+const express = require('express');
+//parse HTTP body ofrequest 
+const bodyParser = require('body-parser');
+
+//express app
+const app = express();
+//server lsitens on port 3000 for incoming requests
+const PORT = 3000;
+
+//this attaches json body parser to express app
+app.use(bodyParser.json());
+
+
+//POST route
+app.post('/ping', (req, res) => {
+  console.log('Received a POST request at /ping from microcontroller!');
+
+  //prints to server console that POST request was recieved. 'req.body' should have a message like "Hello from microcontroller"
+  console.log('Body:', req.body);
+
+  //sends HTTP 200 response back saying "Pong!"
+  res.status(200).json({ message: 'Pong!' });
+});
+
+app.get('/', (req,res) =>{
+  console.log('helo');
+
+});
+app.listen(PORT, "10.245.93.72", () => {
+  console.log(`HTTP server is running on http://10.245.93.72:${PORT}`);
+});
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+//403 code below
+
+
 // packages:
 const WebSocket = require('ws'); // import WebSocket
 const fs = require('fs'); // allows for file reading
@@ -98,3 +259,4 @@ wss.on('connection', (ws, req) => {
   }
 });
 
+*/
