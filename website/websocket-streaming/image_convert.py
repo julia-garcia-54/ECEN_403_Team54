@@ -6,12 +6,12 @@ width, height = 160, 120
 with open("received_image.raw", "rb") as f:
     raw_data = f.read()
 
-# Create a NumPy array from the raw bytes
+#this creates a numpy array from raw bytes
 img_array = np.frombuffer(raw_data, dtype=np.uint8).reshape((height, width))
 
-# Convert to a Pillow Image (mode "L" = 8-bit grayscale)
+#this converts pillow image (mode L means 8 bit grayscale)
 img = Image.fromarray(img_array, mode="L")
 
-# Save or show the image
+#save image
 img.save("output.png")
 img.show()

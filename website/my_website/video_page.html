@@ -23,14 +23,13 @@
   </div>
 
   <script>
-    // Function to update the image element with the latest image
+    //function to update the image element with the latest image
     function updateImage() {
       const imgElement = document.getElementById('video-stream');
-      // Replace "localhost:3000" with your actual server IP/host if needed
       imgElement.src = `http://10.245.93.72:3000/output.png?ts=${Date.now()}`;
     }
 
-    // Update the image every 100ms (adjust as needed)
+    //Update the image every 100ms (may change later)
     setInterval(updateImage, 100);
   </script>
 </body>
